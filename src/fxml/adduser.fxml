@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecepController">
+   <top>
+      <AnchorPane style="-fx-background-color: #339bb1;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="149.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital Management System" textAlignment="CENTER" wrappingWidth="493.6708984375">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="200.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints maxWidth="400.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="200.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="66.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="40.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="60.0" prefHeight="40.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="40.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="338.0" minHeight="10.0" prefHeight="147.0" valignment="BASELINE" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="1" />
+                  <TextField fx:id="age" onKeyReleased="#phoneNumberValidate" promptText="Age in numbers" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Age" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="doctor" promptText="Consulting Doctor" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addUserToDB" style="-fx-background-color: #339bb1;" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paitent Name" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.rowIndex="1" />
+                  <TextField fx:id="fullname" onKeyReleased="#fullnameValidate" promptText="fullname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Gender" textAlignment="RIGHT" wrappingWidth="100.443359375" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="gender" maxWidth="400.0" prefHeight="25.0" prefWidth="200.0" value="Male" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Male" />
+                           <String fx:value="Female" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <Button mnemonicParsing="false" onAction="#back" text="Cancel / Back" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

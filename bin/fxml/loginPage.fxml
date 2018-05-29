@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+	<top>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #339bb1;" BorderPane.alignment="TOP_LEFT">
+			<children>
+				<ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+					<image>
+						<Image url="@../images/logo.png" />
+					</image>
+				</ImageView>
+				<Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital Management System" textAlignment="CENTER" wrappingWidth="493.6708984375" HBox.hgrow="ALWAYS">
+					<font>
+						<Font name="Bauhaus 93" size="36.0" />
+					</font>
+					<fill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop color="BLACK" />
+								<Stop color="WHITE" offset="1.0" />
+							</stops>
+						</LinearGradient>
+					</fill>
+					<HBox.margin>
+						<Insets left="30.0" />
+					</HBox.margin>
+				</Text>
+			</children>
+		</HBox>
+	</top>
+	<center>
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="backgroundImage" stylesheets="@styles.css" BorderPane.alignment="TOP_LEFT">
+
+			<children>
+				<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login Username" textAlignment="CENTER" wrappingWidth="140.6708984375" HBox.hgrow="ALWAYS">
+							<HBox.margin>
+								<Insets top="40.0" />
+							</HBox.margin>
+							<font>
+								<Font name="System Bold" size="18.0" />
+							</font>
+						</Text>
+						<TextField fx:id="userName" onAction="#validatorMessage" prefHeight="31.0" prefWidth="232.0" promptText="User Name">
+							<HBox.margin>
+								<Insets left="20.0" top="40.0" />
+							</HBox.margin>
+						</TextField>
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+							<HBox.margin>
+								<Insets left="60.0" />
+							</HBox.margin>
+							<font>
+								<Font name="System Bold" size="18.0" />
+							</font>
+						</Text>
+                  <PasswordField fx:id="password" onAction="#validatorMessage" prefHeight="31.0" prefWidth="232.0" promptText="Password">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </PasswordField>
+					</children>
+				</HBox>
+				<HBox alignment="TOP_CENTER" prefHeight="179.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+					<children>
+						<Button mnemonicParsing="false" onAction="#validatorMessage" style="-fx-background-color: #339bb1;" text="Log In">
+							<HBox.margin>
+								<Insets left="150.0" />
+							</HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+						</Button>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>
